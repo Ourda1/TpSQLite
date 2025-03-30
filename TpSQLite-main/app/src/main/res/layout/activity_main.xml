@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Gestion des Étudiants"
+            app:titleTextColor="@android:color/white"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ajouter un étudiant"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/nom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nom"
+                            android:inputType="textPersonName"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/prenom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Prénom"
+                            android:inputType="textPersonName"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/dateNaissance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Date de Naissance (YYYY-MM-DD)"
+                            android:inputType="date"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/photoPath"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Chemin de la photo"
+                                android:inputType="text"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnChoisirPhoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Photo"
+                            app:icon="@android:drawable/ic_menu_camera"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/bn"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Valider"
+                        app:icon="@android:drawable/ic_menu_save"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rechercher un étudiant"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="ID de l'étudiant"
+                            android:inputType="number"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/rechercher"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Rechercher"
+                            app:icon="@android:drawable/ic_menu_search"
+                            android:layout_marginEnd="8dp"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/supprimer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Supprimer"
+                            app:icon="@android:drawable/ic_menu_delete"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/res"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:background="#f0f0f0"
+                        android:minHeight="80dp"
+                        android:elevation="1dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/listerEtudiants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Liste des étudiants"
+                app:icon="@android:drawable/ic_menu_sort_by_size"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
